@@ -1,0 +1,183 @@
+body {
+  font-family: Lato;
+}
+
+/* app container */
+.app-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* profile component */
+.profile {
+  border: 1px solid rgba(127, 214, 127, 0.5);
+  background: rgba(1, 1, 1, 0.03);
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* friendContainer  */
+.friend-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(127, 214, 127, 0.5);
+  background: rgba(1, 200, 1, 0.1);
+  padding: 20px;
+  margin: auto 0;
+}
+
+.friend-container-form {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+}
+
+.friend-container-form label {
+  margin: 10px;
+}
+
+.friend-container-form input {
+  margin: 5px;
+}
+
+.submit input {
+  margin: 5px auto;
+  display: block;
+}
+
+.friends-list {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.friends-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-form {
+  border: 1px solid grey;
+  padding: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.skills-form label {
+  padding: 20px;
+}
+
+/* Friend component  */
+.friend-component {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+}
+
+.friend-component h3 {
+  margin: 0;
+}
+
+.friend-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-contact {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.friend-contact h4,
+.friend-contact p {
+  display: inline-block;
+  padding: 0;
+}
+
+.subtle-text {
+  color: rgba(1, 1, 1, 0.17);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.skill-list {
+  font-size: 12px;
+  font-weight: 200;
+  display: flex;
+}
+
+.skill-list ul {
+  display: flex;
+}
+
+.skill-list li {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  background: rbga(1, 1, 1, 0.4);
+  padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .friend-container-form form,
+  .friend-container-form label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .friend-container-form label {
+    font-size: 10px;
+    margin: 0 0 5px 0;
+  }
+
+  .friend-container-form input {
+    margin-left: 0;
+  }
+
+  .skills-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .friends-list ul {
+    padding-left: 0;
+  }
+
+  .friend-component {
+    width: 200px;
+    height: 200px;
+    justify-content: space-evenly;
+  }
+
+  .friend-contact {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .skill-list {
+    justify-content: center;
+  }
+
+  .skill-list ul {
+    padding: 0;
+  }
+}
