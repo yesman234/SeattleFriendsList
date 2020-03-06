@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Friend from "./Friend";
+import Enemy from "./Enemy";
 
-class FriendContainer extends Component {
+class EnemiesContainer extends Component {
   state = {
     name: "",
-    color: "lightblue",
-    isFavorite: false,
+    color: "lightgreen",
+    isWorst: false,
     location: "",
-    friendsList: []
+    enemyList: []
   };
   handleChange = event => {
     const target = event.target;
@@ -19,49 +19,39 @@ class FriendContainer extends Component {
       [name]: value
     });
   };
-  // if(target.type === 'checkbox') val ==== target.checked, else
-  // val ===target.value
   handleSubmit = event => {
     event.preventDefault();
-    // so when you click submit it doesn't refresh
-    // then create friend obj
-    let friendObject = {
+    let enemyObj = {
       name: this.state.name,
       color: this.state.color,
-      isFavorite: this.state.isFavorite,
+      isWorst: this.state.isWorst,
       location: this.state.location
     };
-    // setting state for freiends list, setting friendslist state to, what it's doing, dots bringing up from this.state.friends list and add friend obj at end, so then friends list will be set to new value which is the two added together. spread operator, add cb fx bc after its done setting friend state see if its working add cb
-    // ... means give me all that this state was prev plus friendObject
-    // put cb at end to see friends list state
     this.setState(
       {
-        friendsList: [...this.state.friendsList, friendObject]
+        enemyList: [...this.state.enemyList, enemyObj]
       },
-      () => console.log("my friends list is", this.state.friendsList)
+      () => console.log("my enemy list is", this.state.enemyList)
     );
   };
-  renderFriends = () => {
-    // going to return this.state.friendslist which is an array of obs so going to run a map on it, params are two obs that come back friend and index
-    return this.state.friendsList.map((friend, index) => {
+  renderEnemies = () => {
+    return this.state.enemyList.map((enemy, index) => {
       return (
-        // using index as a key is not good, not scalable
-        // but we are doing it bc no db in demo,
-        // key has to be string
         <li key={index}>
-          <Friend {...friend} />
+          <Enemy {...enemy} />
         </li>
       );
     });
   };
+
   render() {
     return (
-      <div className="friend-container">
-        <p className="subtle-text">Friend Container</p>
-        <div className="friends-container-form">
+      <div className="enemy-container">
+        <p className="subtle-text">Enemy Container</p>
+        <div className="enemy-container-form">
           <form onSubmit={this.handleSubmit}>
             <label>
-              Friend's name
+              Enemy's name
               <input
                 type="text"
                 name="name"
@@ -79,16 +69,16 @@ class FriendContainer extends Component {
                 <option value="lightblue">LightBlue</option>
                 <option value="lightgreen">LightGreen</option>
                 <option value="salmon">Salmon</option>
-                <option value="lavender">Lavender</option>
+                <option value="lavander">Lavander</option>
                 <option value="pink">Pink</option>
               </select>
             </label>
             <label>
-              isFavorite
+              isWorst
               <input
-                name="isFavorite"
+                name="isWorst"
                 type="checkbox"
-                checked={this.state.isFavorite}
+                checked={this.state.isWorst}
                 onChange={this.handleChange}
               ></input>
             </label>
@@ -101,14 +91,14 @@ class FriendContainer extends Component {
                 onChange={this.handleChange}
               ></input>
             </label>
-            <input className="Submit" type="submit" />
+            <input type="submit" className="Submit" />
           </form>
         </div>
-        <div className="friends-list">
-          <ul>{this.renderFriends()}</ul>
+        <div className="enemy-list">
+          <ul>{this.renderEnemies()}</ul>
         </div>
       </div>
     );
   }
 }
-export default FriendContainer;
+export default EnemiesContainer;

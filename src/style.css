@@ -29,18 +29,18 @@ body {
   margin: auto 0;
 }
 
-.friend-container-form {
+.friends-container-form {
   display: flex;
   flex: 1;
   justify-content: center;
   padding: 10px;
 }
 
-.friend-container-form label {
+.friends-container-form label {
   margin: 10px;
 }
 
-.friend-container-form input {
+.friends-container-form input {
   margin: 5px;
 }
 
@@ -135,18 +135,18 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .friend-container-form form,
-  .friend-container-form label {
+  .friends-container-form form,
+  .friends-container-form label {
     display: flex;
     flex-direction: column;
   }
 
-  .friend-container-form label {
+  .friends-container-form label {
     font-size: 10px;
     margin: 0 0 5px 0;
   }
 
-  .friend-container-form input {
+  .friends-container-form input {
     margin-left: 0;
   }
 
@@ -169,6 +169,171 @@ body {
   }
 
   .friend-contact {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .skill-list {
+    justify-content: center;
+  }
+
+  .skill-list ul {
+    padding: 0;
+  }
+}
+
+/* friendContainer  */
+.enemy-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(127, 214, 127, 0.5);
+  background: rgba(1, 200, 1, 0.1);
+  padding: 20px;
+  margin: auto 0;
+}
+
+.enemy-container-form {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+}
+
+.enemy-container-form label {
+  margin: 10px;
+}
+
+.enemy-container-form input {
+  margin: 5px;
+}
+
+.submit input {
+  margin: 5px auto;
+  display: block;
+}
+
+.enemy-list {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.enemy-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-form {
+  border: 1px solid grey;
+  padding: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.skills-form label {
+  padding: 20px;
+}
+
+/* enemy component  */
+.enemy-component {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+}
+
+.enemy-component h3 {
+  margin: 0;
+}
+
+.enemy-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.enemy-contact {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.enemy-contact h4,
+.enemy-contact p {
+  display: inline-block;
+  padding: 0;
+}
+
+.subtle-text {
+  color: rgba(1, 1, 1, 0.17);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.skill-list {
+  font-size: 12px;
+  font-weight: 200;
+  display: flex;
+}
+
+.skill-list ul {
+  display: flex;
+}
+
+.skill-list li {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  background: rbga(1, 1, 1, 0.4);
+  padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .enemy-container-form form,
+  .enemy-container-form label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .enemy-container-form label {
+    font-size: 10px;
+    margin: 0 0 5px 0;
+  }
+
+  .enemy-container-form input {
+    margin-left: 0;
+  }
+
+  .skills-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .enemy-list ul {
+    padding-left: 0;
+  }
+
+  .enemy-component {
+    width: 200px;
+    height: 200px;
+    justify-content: space-evenly;
+  }
+
+  .enemy-contact {
     text-align: center;
     font-size: 11px;
   }
